@@ -6,9 +6,13 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.data.mongodb.config.EnableMongoAuditing;
+import org.springframework.data.mongodb.repository.config.EnableReactiveMongoRepositories;
 import reactor.core.publisher.Flux;
 
 @SpringBootApplication
+@EnableReactiveMongoRepositories
+@EnableMongoAuditing
 public class Application {
 
     public static void main(String[] args) {
